@@ -1,0 +1,23 @@
+.main_collection_header{
+    color: white;
+    padding-left: 50px;
+    padding-top: 30px;
+    cursor: pointer;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+
+    h2{
+        margin: 0;
+        font-weight: 700;
+        font-size: 1.3em;
+        letter-spacing: 0.05em;
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    span{
+        font-size: 0.7em;
+    }
+}

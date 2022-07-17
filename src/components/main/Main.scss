@@ -1,0 +1,71 @@
+.main{
+    background-color: RGB(12, 13, 14);
+    // &_collection{
+    //     &_header{
+    //         color: white;
+    //         padding-left: 50px;
+    //         padding-top: 30px;
+    //         cursor: pointer;
+
+    //         h2{
+    //             margin: 0;
+    //             font-weight: 700;
+    //             font-size: 1.3em;
+    //             letter-spacing: 0.05em;
+    //         }
+    //     }
+    // }
+
+    .collection_list{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+
+    .collection_list_item{
+        text-align: center;
+        color: white;
+        font-size: 1.2em;
+        letter-spacing: 0.03em;
+        margin: 10px;
+        transform: scale(0.93);
+        cursor: pointer;
+        transition: all 0.5s;
+        position: relative;
+
+        span{
+            text-align: center;
+            font-size: 0.7em;
+        }
+
+        .poster{
+            width: 400px;
+            height: 200px;
+
+            img{
+                width: inherit;
+                height: inherit;
+            }
+        }
+
+        .rating{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-weight: 700;
+            background-color: black;
+            padding: 3px 7px;
+            border-radius: 4px;
+        }
+
+        &:hover{
+            transform: scale(1);
+        }
+    }
+}
