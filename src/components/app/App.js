@@ -1,5 +1,5 @@
 import Header from '../header/Header';
-import Main from '../main/Main';
+// import Main from '../main/Main';
 import Footer from '../footer/Footer';
 
 import Movie from '../../services/movie';
@@ -7,6 +7,8 @@ import { data } from '../../data';
 
 import './App.css';
 import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { MainPage, Page404 } from '../pages';
 
 function App() {
 
@@ -20,21 +22,36 @@ function App() {
 
   useEffect(() => {
     data.forEach(dt => {
-      movie.getMovieCollection(dt.id)
+      movie.getMovieCollection(dt.id, Math.floor(Math.random() * (5 - 1) + 1))
       .then(res => {
         settingState(res);
       })
     })
   }, [])
 
-  console.log(collections);
-
+  // console.log(collections);
   return (
-    <div className="App">
-      <Header/>
-      <Main collections={collections}/>
-      <Footer/>
-    </div>
+    <Router>
+      <div className="App">
+        {/* <Header/> */}
+        <Routes>
+          <Route 
+          path='/' 
+          element={
+            (
+              <>
+                <Header/>
+                  <MainPage collections={collections}/>
+                <Footer/>
+              </>
+            )
+          }/>
+
+          <Route path='*' element={<Page404/>}/>
+        </Routes>
+        {/* <Footer/> */}
+      </div>
+    </Router>
   );
 }
 

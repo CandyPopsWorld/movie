@@ -25,8 +25,8 @@ class Movie {
         return this._transformMovie(res);
     }
 
-    getMovieCollection = async (genre) => {
-        const res = await this.getResource(`${this._apiBase}/api/v2.2/films?genres=${genre}&order=RATING&type=ALL&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000&page=1`);
+    getMovieCollection = async (genre, page) => {
+        const res = await this.getResource(`${this._apiBase}/api/v2.2/films?genres=${genre}&order=RATING&type=ALL&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000&page=${page}`);
         return res.items.map(this._transformCollectionMovie);
     }
 
