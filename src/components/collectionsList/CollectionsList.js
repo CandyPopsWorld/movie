@@ -2,7 +2,7 @@ import CollectionItem from '../collectionItem/CollectionItem';
 
 import './CollectionList.scss';
 
-const CollectionList = ({children}) => {
+const CollectionList = ({children, idKey}) => {
     return (
         <ul className="collection_list">
             {children}

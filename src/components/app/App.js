@@ -8,7 +8,8 @@ import { data } from '../../data';
 import './App.css';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { MainPage, Page404 } from '../pages';
+import { MainPage, Page404, SingleMoviePage} from '../pages';
+
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
   }, [])
 
   // console.log(collections);
+  
   return (
     <Router>
       <div className="App">
@@ -47,6 +49,7 @@ function App() {
             )
           }/>
 
+          <Route path='/film/:filmId' element={<SingleMoviePage/>}/>
           <Route path='*' element={<Page404/>}/>
         </Routes>
         {/* <Footer/> */}

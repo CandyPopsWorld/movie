@@ -31,6 +31,7 @@ const Footer = () => {
                 <p>ООО «Кинопоиск», адрес местонахождения: 115035, Россия, г. Москва, ул. Садовническая, д. 82, стр. 2, пом. 9А01</p>
                 <p>Intertech Service AG</p>
                 <p>Адрес для обращений пользователей: kinopoisk@support.yandex.ru</p>
+                <p>Это моя сестренка ВИКА! ОНА САМАЯ ЛУЧШАЯ СЕСТРА НА СВЕТЕ!</p>
                 <div className="about_links">
                     <a href="https://yandex.ru/legal/kinopoisk_vod">Соглашение</a>
                     <a href="https://yandex.ru/support/kinopoisk">Справка</a>

@@ -1,3 +1,4 @@
+import {NavLink} from 'react-router-dom';
 
 import './NavPanel.scss';
 
@@ -14,23 +15,26 @@ const NavPanel = () => {
 
             <div className="header_item header_second">
                 <div className="header_link">
-                    <a href="">Главное</a>
+                    <NavLink 
+                    end 
+                    to='/'
+                    style={({isActive}) => ({color: isActive ? 'red' : 'gray'})}>Главное</NavLink>
                 </div>
 
                 <div className="header_link">
-                    <a href="">Магазин</a>
+                    <a>Магазин</a>
                 </div>
 
                 <div className="header_link">
-                    <a href="">Моё</a>
+                    <a>Моё</a>
                 </div>
 
                 <div className="header_link">
-                    <a href="">Телеканалы</a>
+                    <a>Телеканалы</a>
                 </div>
 
                 <div className="header_link">
-                    <a href="">Спорт</a>
+                    <a>Спорт</a>
                 </div>
 
                 <div className="header_search">

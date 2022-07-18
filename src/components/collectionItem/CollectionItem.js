@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CollectionItem = (props) => {
     let {name, poster, rating, idKey} = props;
     const style = {'backgroundColor': null};
@@ -13,7 +15,7 @@ const CollectionItem = (props) => {
         rating += '.0';
     }
     return (
-    <div className="collection_list_item" key={idKey}>                    
+    <Link to={`/film/${idKey}`} className="collection_list_item" >                    
         <div className="poster">
             <img src={poster} alt=""/>
             {/* <img src="https://images.unsplash.com/photo-1657907157592-dd6cfb9d06cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80" alt=""/> */}
@@ -22,7 +24,7 @@ const CollectionItem = (props) => {
         <div className="rating" style={style}>
             <span>{rating}</span>
         </div>
-    </div>
+    </Link>
     )
 }
 

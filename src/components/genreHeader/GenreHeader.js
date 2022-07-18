@@ -1,7 +1,8 @@
 
 import './GenreHeader.scss';
 
-const GenreHeader = ({genre}) => {
+const GenreHeader = ({genre, idKey}) => {
+    genre = genre.toUpperCase()
     return(
     <div className="main_collection_header">
         <h2>{genre}</h2>

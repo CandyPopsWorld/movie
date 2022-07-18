@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Movie from '../../services/movie';
 import './Poster.scss';
 
@@ -26,17 +27,15 @@ class Poster extends Component{
                 </div>
     
                 <div className="header_poster_buttons">
-                    <div className="header_poster_watch_button">
-                        <button 
-                        onClick={() => this.watchMovie(idKey)}>▶ Смотреть Онлайн</button>
-                    </div>
+                    <Link to={`/film/${idKey}`} className="header_poster_watch_button">
+                        <button>▶ Смотреть Онлайн</button>
+                    </Link>
     
-                    <div className="header_poster_about_button">
-                        <button
-                        onClick={() => this.aboutMovie(idKey)}>
+                    <Link to={`/film/${idKey}`} className="header_poster_about_button">
+                        <button>
                             <img src="https://cdn-icons-png.flaticon.com/512/106/106878.png" alt=""/>О фильме
                         </button>
-                    </div>
+                    </Link>
     
                     <div className="header_poster_bookmark_button">
                         <button><img src="https://img.icons8.com/color/344/bookmark-ribbon--v2.png" alt=""/></button>

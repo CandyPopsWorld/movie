@@ -1,4 +1,4 @@
-import { Component} from 'react';
+import { Component, Fragment} from 'react';
 import CollectionList from '../collectionsList/CollectionsList';
 import CollectionItem from '../collectionItem/CollectionItem';
 import GenreHeader from '../genreHeader/GenreHeader';
@@ -16,12 +16,12 @@ const Main = ({collections}) =>{
     })
 
     return (
-      <>
+      <Fragment key={i}>
         <GenreHeader genre={data[i].genre}/>
         <CollectionList>
           {elements}
         </CollectionList>
-      </>
+      </Fragment>
     )
   })
   return(
